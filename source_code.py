@@ -5,32 +5,25 @@
 import time
 
 
-
 print("Please answer all questions directly, unless indicated otherwise by: (Y/N) ")
 # time.sleep(5)
 
 TITLE = input(str("[1] What would you like the Heading of your markdown file to be called?   "))
-TITLE_SIZE = input(str("[2] What size (level 1-6) would you like your Heading to be?   "))    # STRING INPUT  
+TITLE_SIZE = input(str("[2] What size (level 1-6) would you like your Heading to be?   "))    # STRING INPUT  |  #Title Size is determined by hashtags before the title 
 
 #TITLESIZE EDITS:
 if TITLE_SIZE == "1":
     TITLE_SIZE_1 = TITLE.replace(TITLE, "# "+TITLE)
-    print(TITLE_SIZE_1)
 if TITLE_SIZE == "2":
     TITLE_SIZE_2 = TITLE.replace(TITLE, "## "+TITLE)
-    print(TITLE_SIZE_2)
 if TITLE_SIZE == "3":
     TITLE_SIZE_3 = TITLE.replace(TITLE, "### "+TITLE)
-    print(TITLE_SIZE_3)
 if TITLE_SIZE == "4":
     TITLE_SIZE_4 = TITLE.replace(TITLE, "#### "+TITLE)
-    print(TITLE_SIZE_4)
 if TITLE_SIZE == "5":
     TITLE_SIZE_5 = TITLE.replace(TITLE, "##### "+TITLE)
-    print(TITLE_SIZE_5)
 if TITLE_SIZE == "6":
     TITLE_SIZE_6 = TITLE.replace(TITLE, "###### "+TITLE)
-    print(TITLE_SIZE_6)
 DESCRIPTION = input(str("[3] Please give a brief description on the contents of your file:   "))
 DESCRIPTION_EDITS = input(str("[4] Is there any part of your description [3] that you would like to edit? E.g make a word bold (Y/N)   "))
 
