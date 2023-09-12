@@ -1,4 +1,7 @@
 # MarkDownHelper
+
+ETHAN DENYER
+
 Program which provides support with writing Markdown (.md) files 
 
 If a section isn't needed then we can simply put a capital "X" to skip to the next stage 
