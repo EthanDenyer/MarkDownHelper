@@ -2,7 +2,7 @@
 #SOURCECODE:
 # 1.02
 
-#Requirement file allows you to import package 
+#Requirement file allows you to import package into venv without having to pip install everything manually (and slowly!)
 
 import time
 from time import sleep
@@ -12,7 +12,7 @@ print("Please answer all questions directly, unless indicated otherwise by: (Y/N
 # time.sleep(5)
 
 TITLE = input(str("[1] What would you like the Heading of your markdown file to be called?   "))
-TITLE_SIZE = input(str("[2] What size (level 1-6) would you like your Heading to be?   "))    # STRING INPUT  |  #Title Size is determined by hashtags before the title 
+TITLE_SIZE = input(str("[2] What size (lzyou like your Heading to be?   "))    # STRING INPUT  |  #Title Size is determined by hashtags before the title 
     #Add in a requirement that TITLE_SIZE must be numerical or else we will display an error message and make them repeat the question. 
 
 #TITLESIZE EDITS:   #useelif
