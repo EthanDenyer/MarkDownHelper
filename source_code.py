@@ -12,7 +12,7 @@ print("Please answer all questions directly, unless indicated otherwise by: (Y/N
 # time.sleep(5)
 
 TITLE = input(str("[1] What would you like the Heading of your markdown file to be called?   "))
-TITLE_SIZE = input(str("[2] What size (lzyou like your Heading to be?   "))    # STRING INPUT  |  #Title Size is determined by hashtags before the title 
+TITLE_SIZE = input(str("[2] What size would you like your Heading to be? (1 - 6 / Large - small)   "))    # STRING INPUT  |  #Title Size is determined by hashtags before the title 
     #Add in a requirement that TITLE_SIZE must be numerical or else we will display an error message and make them repeat the question. 
 
 #TITLESIZE EDITS:   #useelif
@@ -35,27 +35,27 @@ DESCRIPTION_EDITS = input(str("[4] Is there any part of your description [3] tha
 #END OF TITLESIZE EDITS
 
 
-#DESCRIPTION EDITS:
+#DESCRIPTION EDITS: #Similar to title size variable we are creating our variable for edit changes (NEW_DESC_EDIT)
 if DESCRIPTION_EDITS == "Y":
     DESCRIPTION_EDITS_CHANGES = input("[4.1] What word would you like to edit?   ")
     DESCRIPTION_EDITS_CHANGES_SPECIFIC = input("[4.2] How would you like to edit that word from these choices: (Bold/Hyperlink/Underlined/Italics)   ")
     if DESCRIPTION_EDITS_CHANGES_SPECIFIC == "Bold":   #Markdown uses asterixes for bold
-        NEW_BOLD = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES,"**"+DESCRIPTION_EDITS_CHANGES+"**" )
+        NEW_DESC_EDIT = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES,"**"+DESCRIPTION_EDITS_CHANGES+"**" )
         # print(NEW_BOLD)
     if DESCRIPTION_EDITS_CHANGES_SPECIFIC == "Hyperlink":  # Markdown uses [hyperlinkname](hyperlinkurl)
         INPUT_HYPERLINK = input("[4.3] Can you please paste the hyperlink URL that you would like to use:   ")
         NEW_HYPERLINK = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES,"["+DESCRIPTION_EDITS_CHANGES+"]")  #Edit original word to add hyperlink brackets
         # print(NEW_HYPERLINK)
-        NEW_HYPERLINK_URL = NEW_HYPERLINK.replace(NEW_HYPERLINK,NEW_HYPERLINK+"("+INPUT_HYPERLINK+")")  #Edit original word to add hyperlink brackets
+        NEW_DESC_EDIT = NEW_HYPERLINK.replace(NEW_HYPERLINK,NEW_HYPERLINK+"("+INPUT_HYPERLINK+")")  #Edit original word to add hyperlink brackets
         # print(NEW_HYPERLINK_URL)
     if DESCRIPTION_EDITS_CHANGES_SPECIFIC == "Underlined":    #Markdown uses <ins> to format to Underlined
-       NEW_UNDERLINED = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES,"<ins>"+DESCRIPTION_EDITS_CHANGES+"<ins>")
+       NEW_DESC_EDIT = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES,"<ins>"+DESCRIPTION_EDITS_CHANGES+"<ins>")
     #    print(NEW_UNDERLINED) 
     if DESCRIPTION_EDITS_CHANGES_SPECIFIC == "Italics":    #Markdown uses <ins> to format to Italics
-        NEW_ITALICS = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES, "*"+DESCRIPTION_EDITS_CHANGES+"*")
+        NEW_DESC_EDIT = DESCRIPTION_EDITS_CHANGES.replace(DESCRIPTION_EDITS_CHANGES, "*"+DESCRIPTION_EDITS_CHANGES+"*")
         # print(NEW_ITALICS)
 else:
-    SUB_HEADERS = input(str("[5] How many subheaders are required within the document? (Maximum of ten)   ")) # STRING INPUT 
+    SUB_HEADERS = input(str("[5] How many subheaders are required within the document? (Maximum of ten)   ")) # STRING INPUT I NEED TO EDIT THIS BECAUSE IT IS CURRENTLY RUNNING AFTER IN THE ELSE STATEMENT RATHER THAN JUST RUNNING. 
 
 #END OF DESCRIPTION EDITS
 
@@ -73,18 +73,19 @@ if SUB_HEADERS > "1":
 
 if SUB_HEADERS < "0":
     print("Invalid Input")
+    
 
 
-HEAD_0 = NEW_HEADER_list[0]
-HEAD_1 = NEW_HEADER_list[1]
-HEAD_2 = NEW_HEADER_list[2]
-HEAD_3 = NEW_HEADER_list[3]
-HEAD_4 = NEW_HEADER_list[4]
-HEAD_5 = NEW_HEADER_list[5]
-HEAD_6 = NEW_HEADER_list[6]
-HEAD_7 = NEW_HEADER_list[7]
-HEAD_8 = NEW_HEADER_list[8]
-HEAD_9 = NEW_HEADER_list[9]
+# HEAD_0 = NEW_HEADER_list[0]
+# HEAD_1 = NEW_HEADER_list[1]
+# HEAD_2 = NEW_HEADER_list[2]
+# HEAD_3 = NEW_HEADER_list[3]
+# HEAD_4 = NEW_HEADER_list[4]
+# HEAD_5 = NEW_HEADER_list[5]
+# HEAD_6 = NEW_HEADER_list[6]
+# HEAD_7 = NEW_HEADER_list[7]
+# HEAD_8 = NEW_HEADER_list[8]
+# HEAD_9 = NEW_HEADER_list[9]
  #NOTE TO MYSELF I WILL NEED TO CHANGE THE SUB HEADER LATER 
 #END OF ADDITIONAL HEADERS
 
@@ -92,5 +93,6 @@ HEAD_9 = NEW_HEADER_list[9]
 print("------------------------------------")
 print("---------GENERATED .MD CODE---------")
 print(TITLE_SIZE_VARIABLE)
+print(NEW_DESC_EDIT)
 # END OUTPUTTED RESULT:
 
