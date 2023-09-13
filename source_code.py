@@ -2,6 +2,8 @@
 #SOURCECODE:
 # 1.02
 
+#Requirement file allows you to import package 
+
 import time
 from time import sleep
 
@@ -13,18 +15,18 @@ TITLE = input(str("[1] What would you like the Heading of your markdown file to 
 TITLE_SIZE = input(str("[2] What size (level 1-6) would you like your Heading to be?   "))    # STRING INPUT  |  #Title Size is determined by hashtags before the title 
     #Add in a requirement that TITLE_SIZE must be numerical or else we will display an error message and make them repeat the question. 
 
-#TITLESIZE EDITS:
+#TITLESIZE EDITS:   #useelif
 if TITLE_SIZE == "1":
     TITLE_SIZE_VARIABLE = TITLE.replace(TITLE, "# "+TITLE)
-if TITLE_SIZE == "2":
+elif TITLE_SIZE == "2":
     TITLE_SIZE_VARIABLE = TITLE.replace(TITLE, "## "+TITLE)
-if TITLE_SIZE == "3":
+elif TITLE_SIZE == "3":
     TITLE_SIZE_VARIABLE = TITLE.replace(TITLE, "### "+TITLE)
-if TITLE_SIZE == "4":
+elif TITLE_SIZE == "4":
     TITLE_SIZE_VARIABLE = TITLE.replace(TITLE, "#### "+TITLE)
-if TITLE_SIZE == "5":
+elif TITLE_SIZE == "5":
     TITLE_SIZE_VARIABLE = TITLE.replace(TITLE, "##### "+TITLE)
-if TITLE_SIZE == "6":
+elif TITLE_SIZE == "6":
     TITLE_SIZE_VARIABLE = TITLE.replace(TITLE, "###### "+TITLE)
 
 DESCRIPTION = input(str("[3] Please give a brief description on the contents of your file:   "))
