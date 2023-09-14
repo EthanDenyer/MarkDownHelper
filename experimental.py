@@ -45,8 +45,17 @@
 # user_input(new_input)     
 N123_SUB_HEADERS = input("[6] Please list all the different subheaders that are required. Seperated by a space.   ") # Because we have more than one subheader we now need to seperate them each by 
 NEW_HEADER_list = N123_SUB_HEADERS.split() #Example HEADER list = ["Functions Progression Specifications Resources Limits Computing"]
-List_Value = NEW_HEADER_list
+List_Value = len(NEW_HEADER_list)
 
+
+#13/9/23: FUNC ATTEMPT 1
+
+def assignindex(input):
+    input = List_Value #This has appended six values 
+    print(List_Value)  
+
+
+assignindex(input)
 # HEAD_0 = NEW_HEADER_list[0]
 # HEAD_1 = NEW_HEADER_list[1]
 # HEAD_2 = NEW_HEADER_list[2]
