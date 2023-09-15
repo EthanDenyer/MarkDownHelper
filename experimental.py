@@ -48,14 +48,20 @@ NEW_HEADER_list = N123_SUB_HEADERS.split() #Example HEADER list = ["Functions Pr
 List_Value = len(NEW_HEADER_list)
 
 
-#13/9/23: FUNC ATTEMPT 1
+#13/9/23: FUNC ATTEMPT 1 - I WANT TO CREATE A WORKING INPUT WHICH ALLOWS US TO ASSIGN A VARIABLE NAME ITERATION ON NUMBER OF CHANGES
+List_Value_Dic = {}
 
 def assignindex(input):
     input = List_Value #This has appended six values 
     print(List_Value)  
+    for i in range(List_Value):      #This will now print the amount of values in the range
+        List_Value_Dic["Heading{0}".format(i)] = "EXAMPLE"              #Now we want the function to create variables and assign each variable to that index
 
+#int isn't iterable, so we need a way
 
-assignindex(input)
+print(type(List_Value))   #This confirms that List_Value is an integer. We cannot iterate a Integer
+
+assignindex(N123_SUB_HEADERS)
 # HEAD_0 = NEW_HEADER_list[0]
 # HEAD_1 = NEW_HEADER_list[1]
 # HEAD_2 = NEW_HEADER_list[2]
@@ -66,3 +72,13 @@ assignindex(input)
 # HEAD_7 = NEW_HEADER_list[7]
 # HEAD_8 = NEW_HEADER_list[8]
 # HEAD_9 = NEW_HEADER_list[9]
+
+
+
+
+# dog = 5
+
+# print(type(dog))
+
+# for i in range(dog):
+#     print("Hello")    #SO WHAT

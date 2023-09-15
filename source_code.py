@@ -7,6 +7,9 @@
 import time
 from time import sleep
 
+def assignindex(input):
+    input = List_Value #This has appended six values 
+    print(List_Value)  
 
 print("[SYSTEM] Please answer all questions directly, unless indicated otherwise by: (Y/N) ")
 # time.sleep(5)
@@ -68,11 +71,12 @@ if SUB_HEADERS == "0":
    print("[SYSTEM] No subheadings will be added.   ")
 if SUB_HEADERS == "1":
     N1_SUB_HEADERS = input("[6] Please list the subheading that is required.   ")
+    assignindex(N1_SUB_HEADERS)
 if SUB_HEADERS > "1":
     N123_SUB_HEADERS = input("[6] Please list all the different subheaders that are required they need to be seperated by a space.   ") # Because we have more than one subheader we now need to seperate them each by a space to allow for our split function 
     NEW_HEADER_list = N123_SUB_HEADERS.split() #Example HEADER list = ["Functions Progression Specifications Resources Limits Computing"]
     List_Value = len(NEW_HEADER_list)    #We want to assign the value of the elements in our list to the variable List_Value, this will then be used in our function 
-
+    assignindex(N123_SUB_HEADERS)
 if SUB_HEADERS < "0": 
     print("[SYSTEM] Invalid Input. ")
 
@@ -81,20 +85,19 @@ if SUB_HEADERS < "0":
 #  VALUE SO THAT WE CAN ADD THE VALUES 
 
 #Input value is going to be STORED IN N123_SUB_HEADERS IN STRING FORMAT
-for VAL in N123_SUB_HEADERS:
     
 
-#INDEX VALUES FOR HEADERS
-HEAD_0 = NEW_HEADER_list[0]
-HEAD_1 = NEW_HEADER_list[1]
-HEAD_2 = NEW_HEADER_list[2]
-HEAD_3 = NEW_HEADER_list[3]
-HEAD_4 = NEW_HEADER_list[4]
-HEAD_5 = NEW_HEADER_list[5]
-HEAD_6 = NEW_HEADER_list[6]
-HEAD_7 = NEW_HEADER_list[7]
-HEAD_8 = NEW_HEADER_list[8]
-HEAD_9 = NEW_HEADER_list[9]
+#INDEX VALUES FOR HEADERS - this will only work if we have ten index
+# HEAD_0 = NEW_HEADER_list[0]
+# HEAD_1 = NEW_HEADER_list[1]
+# HEAD_2 = NEW_HEADER_list[2]
+# HEAD_3 = NEW_HEADER_list[3]
+# HEAD_4 = NEW_HEADER_list[4]
+# HEAD_5 = NEW_HEADER_list[5]
+# HEAD_6 = NEW_HEADER_list[6]
+# HEAD_7 = NEW_HEADER_list[7]
+# HEAD_8 = NEW_HEADER_list[8]
+# HEAD_9 = NEW_HEADER_list[9]
  #NOTE TO MYSELF I WILL NEED TO CHANGE THE SUB HEADER LATER 
 #END OF ADDITIONAL HEADERS
 
