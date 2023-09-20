@@ -64,7 +64,7 @@ else:
 #END OF DESCRIPTION EDITS
 
 # ADDITIONAL HEADERS: This system is designed to create additional headers known as "subheaders / smaller titles"
-SUB_HEADERS = input(str("[5] How many subheaders are required within the document? (Maximum of ten)   ")) #String input
+SUB_HEADERS = input(int("[5] How many subheaders are required within the document? (Maximum of ten)   ")) #String input
 
 if SUB_HEADERS == "0":
    sleep(0.5)
