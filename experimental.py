@@ -45,7 +45,7 @@
 # user_input(new_input)     
 N123_SUB_HEADERS = input("[6] Please list all the different subheaders that are required. Seperated by a space.   ") # Because we have more than one subheader we now need to seperate them each by 
 NEW_HEADER_list = N123_SUB_HEADERS.split() #Example HEADER list = ["Functions Progression Specifications Resources Limits Computing"]
-List_Value = len(NEW_HEADER_list)
+List_Value = len(NEW_HEADER_list) #Number of strings in the list (INTEGER)
 
 
 #13/9/23: FUNC ATTEMPT 1 - I WANT TO CREATE A WORKING INPUT WHICH ALLOWS US TO ASSIGN A VARIABLE NAME ITERATION ON NUMBER OF CHANGES
@@ -54,14 +54,14 @@ List_Value_Dic = {}
 def assignindex(input):
     input = List_Value #This has appended six values 
     print(List_Value)  
-    for i in range(List_Value):      #This will now print the amount of values in the range
-        List_Value_Dic["Heading{0}".format(i)] = "EXAMPLE"              #Now we want the function to create variables and assign each variable to that index
+    for i in range(List_Value)      #This will now print the amount of values in the range
+    #I need a function that allows us to create the number of variables which are in List_Value
 
 #int isn't iterable, so we need a way
 
-print(type(List_Value))   #This confirms that List_Value is an integer. We cannot iterate a Integer
-
-assignindex(N123_SUB_HEADERS)
+print(type(List_Value),"LIST VALUE")   #This confirms that List_Value is an integer. We cannot iterate a Integer
+assignindex(input)
+# assignindex(N123_SUB_HEADERS)
 # HEAD_0 = NEW_HEADER_list[0]
 # HEAD_1 = NEW_HEADER_list[1]
 # HEAD_2 = NEW_HEADER_list[2]
